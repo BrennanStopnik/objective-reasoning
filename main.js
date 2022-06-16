@@ -4,6 +4,9 @@
 
 // IS ADMIN
 
+console.log("\n");
+console.log("IS ADMIN");
+
 function isAdmin(user){
     if(user.userRole === "ADMIN"){
         return true;
@@ -33,6 +36,9 @@ console.log(isAdmin(user3));
 
 // GET EMAIL
 
+console.log("\n");
+console.log("GET EMAIL");
+
 function getEmail(user){
     return `${user.firstName.toLowerCase()}.${user.lastName.toLowerCase()}@codeimmersives.com`
 }
@@ -49,6 +55,9 @@ console.log(getEmail(userName2));
 
 
 // GET PLAYLIST LENGTH
+
+console.log("\n");
+console.log("GET PLAYLIST LENGTH");
 
 function getPlaylistLength(playlist){
     let count = playlist.songs.length;
@@ -67,6 +76,9 @@ console.log(getPlaylistLength(pl2));
 
 
 // GET HARDEST HOMEWORK
+
+console.log("\n");
+console.log("GET HARDEST HOMEWORK");
 
 function getHardestHomework(homework){
     if (homework.length === 0){
@@ -97,17 +109,39 @@ console.log(getHardestHomework([
 
 // CREATE PHONEBOOK
 
+console.log("\n");
+console.log("CREATE PHONEBOOK");
+
+function createPhonebook(name, number){
+    if (name.length === 0){
+        return {};
+    }
+    let phonebook = {};
+    for (let i = 0; i < name.length; i++){
+        phonebook[name[i]] = number[i];
+    }
+    return phonebook;
+}
+
+console.log(createPhonebook(['Jimothy', 'Maria', 'Karl'], ['123-456-7890', '000-000-0000', '999-888-7766']));
+console.log(createPhonebook(['Melissa', 'Andre'], ['206-111-2233', '321-123-2424']));
+console.log(createPhonebook([], []));
+
+
+
+
 // function createPhonebook(name, number){
+//     if (name === 0 && number === 0){
+//         return ""
+//     }
 //     let phonebook = {};
 //     for (let i = 0; i< name.length; i++){
-//         phonebook.name = name[i];    
+//         phonebook[name] = name[i];    
 //     };
 //     for (let i = 0; i< name.length; i++){
-//         phonebook.phoneNumber = number[i];    
+//         phonebook[phoneNumber] = number[i];    
 //     };
-//     return phonebook = {
-//         ph
-//     }
+//     return phonebook 
 // }
 
 // ┌─────────────────────────────────────┐
